@@ -7,6 +7,7 @@
   "dependencies": {
     "discord.io": "^2.5.3",
     "discord.js": "^11.5.1",
+    "imdb-api": "^4.0.3",
     "winston": "^3.2.1"
   }
 }
