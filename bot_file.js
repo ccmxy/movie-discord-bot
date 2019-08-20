@@ -24,8 +24,13 @@ client.on('message', msg => {
         cli.search({
             'name': filmname
         }).then((search) => {
+          var film_json = JSON.stringify(search, null, 2);
+          console.log(film_json);
+
             for (const result of search.results) {
-                msg.reply(i + ": " + result.title);
+                reply_msg = i + ": " + result.title;
+                if (result.year != null) {reply_msg += " (" + result.year + ")";}
+                msg.reply(reply_msg);
 
                 i++;
             }
